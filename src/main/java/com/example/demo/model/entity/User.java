@@ -38,6 +38,9 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "user")
     private Set<Vm> vms;
 
+    @OneToMany(mappedBy = "user")
+    private Set<Log> logs;
+
     public User(String username, String password,
                 UserRole userRole) {
         this.username = username;
